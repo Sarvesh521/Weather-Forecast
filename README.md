@@ -1,0 +1,1 @@
+This repository contains a Django project that demonstrates the usage of 3rd party APIs to create a weather forecast application. The application retrieves real-time weather data for a specified location and serves as an example of integrating external APIs into a Django project.
