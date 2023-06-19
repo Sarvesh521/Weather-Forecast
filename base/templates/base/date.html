@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div>
+    {% for x in room %}
+    <ul>
+        <li>Time -- {{x.hour}}</li>
+        <li>Temp -- {{x.temp_c}}</li>
+        <li>{{x.condition}}</li>
+        <img src="https:{{x.icon}}"></img>
+        <hr>
+    </ul>
+    {% endfor %}
+</div>
+{% endblock content %}

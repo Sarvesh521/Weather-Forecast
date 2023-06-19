@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>WEATHER</h1>
+<div>
+    <div>
+        <form method="post" action="{% url 'city' %}">
+            {% csrf_token %}
+            <input type="text" name="city" placeholder="Enter City">
+            <input type="text" name="numberofdays" size="35" placeholder="Enter Number of days of weather forecast">
+            <button type="submit">Check Weather</button> 
+        </form>
+    </div>
+</div>
+{% endblock content%}

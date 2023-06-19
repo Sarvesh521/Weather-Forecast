@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+{% block content %}
+<div>
+    <!-- <h2>"HI"</h2> -->
+    <div>
+        <div>
+            {% for x in room %}
+            <ul>
+                <li>Location -- {{x.location}}</li>
+                <li><a href="/date/{{x.dat}}/{{x.location}}/{{x.days}}">Date -- {{x.date}}</a></li>
+                <li> Maxtemp(C) -- {{x.maxtemp_c}}</li>
+                <li> Mintemp(C) -- {{x.mintemp_c}}</li>
+                <li> Avgtemp(C) -- {{x.avgtemp_c}}</li>
+                <li> Sunrise -- {{x.sunrise}}</li>
+                <li> Sunset -- {{x.sunset}}</li>
+                <li> Moonphase -- {{x.moonphase}}</li>
+                <li> Condition -- {{x.condition}}</li>
+                <li> Windspeed -- {{x.windspeed}} kph</li>
+                <img src="https:{{x.pic}}"></img>
+                <hr>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content%}

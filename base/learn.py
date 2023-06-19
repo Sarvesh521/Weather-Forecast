@@ -1,0 +1,12 @@
+import requests
+response=requests.get("https://api.weatherapi.com/v1/forecast.json?key=5b79b1cb7bd842dc9e9200012231106&q=london&days=3&aqi=no&alerts=no")
+res=response.json()
+# print(list(res.keys()))
+# print(res['location']['name'])
+# print(res['forecast']['forecastday'][0]['date'])
+# print(res['forecast']['forecastday'][0].keys())
+# print(res['forecast']['forecastday'][0]['day']['condition']['text'])
+# print(res['forecast']['forecastday'][0]['day']['condition']['icon'])
+# return render(request,'base/city.html',res)
+# print(res['forecast']['forecastday'][1]['date'])
+print(res['forecast']['forecastday'][1]['hour'][23]['time'])
